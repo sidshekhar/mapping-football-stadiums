@@ -1,7 +1,7 @@
 <?php
 
 //username
-$DB_USERNAME = "uczchek";
+$DB_USERNAME = "******";
 
 // Open a connection to the database
 $dbh = pg_connect("dbname=$DB_USERNAME");
