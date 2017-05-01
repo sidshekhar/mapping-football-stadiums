@@ -1,0 +1,364 @@
+
+/* basic container styling */
+div.container {
+    width: 100%;
+    border: 1px solid gray;
+    max-width: 18000px;
+    /* A really big width - just in case (responsive design) */
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+header,
+footer {
+    padding: 1em;
+    color: white;
+    background-color: black;
+    clear: left;
+    text-align: center;
+    font-family: 'Marvel';
+    font-size: 20px;
+
+
+}
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-family: "PT Sans Narrow", sans-serif;
+}
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Marvel';
+}
+
+/* Leaflet map styling */
+#mapid {
+    height: 120%;
+    width: 68%;
+    float: left;
+    margin-right: 10px;
+	margin-left: 10px;
+    border: thin solid black;
+}
+
+
+
+/* Team Search styling */
+.search {
+    padding: 6px 15px 6px 30px;
+    margin: 3px;
+    background: url('./Images/search.png') no-repeat 8px 6px;
+}
+
+/* allows spacing between various filter divs on page */
+.filter {
+    padding: 1.5em;
+}
+
+
+/* Team Search Autocomplete Styiling - scroll results */
+.ui-autocomplete {
+    max-height: 250px;
+    overflow-y: auto;
+    /* prevent horizontal scrollbar */
+    
+    overflow-x: hidden;
+    /* add padding for vertical scrollbar */
+    
+    padding-right: 5px;
+}
+
+
+
+/* Styling for page buttons */
+.btn-class {
+    display: inline-block;
+    border: 3px solid #080808;
+    color: #FFFCFC;
+    border-radius: 3px 3px 3px 3px;
+    -webkit-border-radius: 3px 3px 3px 3px;
+    -moz-border-radius: 3px 3px 3px 3px;
+    font-family: "Verdana", sans-serif;
+    width: auto;
+    height: auto;
+    font-size: 12px;
+    padding: 5px 10px;
+    text-shadow: 0 1px 0 #FFFFFF;
+    background-color: #030303;
+    margin-top: 5px;
+}
+.btn-class:hover,
+.btn-class:active {
+    border: 3px solid #050505;
+    color: #000000;
+    background-color: #FFFFFF;
+    cursor: pointer;
+    cursor: hand;
+}
+
+
+
+/* Toggle Slider switch - box around slider */
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+/* Hide default HTML checkbox */
+
+.switch input {
+    display: none;
+}
+
+/* Toggle slider styling */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+input:checked + .slider {
+    background-color: #2196F3;
+}
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded toggle sliders */
+.slider.round {
+    border-radius: 34px;
+}
+.slider.round:before {
+    border-radius: 50%;
+}
+
+
+/* Information Box styling */
+.info {
+    padding: 6px 8px;
+    font: 14px/16px Arial, Helvetica, sans-serif;
+    background: white;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+.info h4 {
+    margin: 0 0 5px;
+    color: #777;
+}
+
+
+/* Sources Modal (background) */
+.modal {
+    display: none;
+    /* Hidden by default */
+    
+    position: fixed;
+    /* Stay in place */
+    
+    z-index: 10000;
+    /* Sit on top */
+    
+    padding-top: 400px;
+    /* Location of the box */
+    
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    
+    height: 100%;
+    /* Full height */
+    
+    overflow: auto;
+    /* Enable scroll if needed */
+    
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Add Animation to modal */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+/* The Close Button of the modal*/
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: black;
+    color: white;
+}
+
+.modal-body {
+	padding: 2px 16px;
+	margin-left: 16px;
+	margin-bottom: 16px;
+	matgin-right: 16px;
+}
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: black;
+    color: white;
+}
+
+/* All links Styling */
+a { color: #2200CC;
+text-decoration: underline
+}
+
+a:hover {
+color:#000000;
+text-decoration : none;
+}
+
+
+/* Styling for jQuery stadium capacity range slider */
+.flat-slider.ui-corner-all,
+.flat-slider .ui-corner-all {
+  border-radius: 0;
+}
+
+
+.flat-slider.ui-slider {
+  border: 0;
+  background: #c5bdbc;
+  border-radius: 7px;
+  position: relative;
+  width: 70%;
+  z-index:1;
+  display: inline-block;
+  cursor: pointer;
+  margin-left: 9px;
+  margin-right: 9px;
+}
+
+.flat-slider.ui-slider-horizontal {
+  height: 10px;
+}
+
+.ui-slider-vertical {
+  height: 15em;
+  width: 10px;
+}
+
+.flat-slider .ui-slider-handle {
+  width: 20px;
+  height: 20px;
+  background: black !important;
+  border: none !important;
+  border-radius: 50%;
+  cursor: pointer;
+  outline:none;
+}
+
+.flat-slider.ui-slider-horizontal .ui-slider-handle {
+  top: 50%;
+  margin-top: -10px;
+}
+
+.flat-slider.ui-slider-vertical .ui-slider-handle {
+  left: 50%;
+  margin-left: -10px;
+}
+
+.flat-slider .ui-slider-handle:hover {
+  color:  #ff0000;
+}
+
+.flat-slider .ui-slider-range {
+  border: 0;
+  border-radius: 7;
+  background: #2196F3;
+}
+
+.flat-slider.ui-slider-horizontal .ui-slider-range {
+  top: 0;
+  height: 10px;
+}
+
+.flat-slider.ui-slider-vertical .ui-slider-range {
+  left: 0;
+  width: 10px;
+}
+
+
+/*Slider text styling */
+#amount{
+border:0; 
+color: red;
+font-weight:bold;
+
+}
+
+/* Setting width of leaflet popup to accomodate team logos*/
+.leaflet-popup-content {
+width:auto;
+
+}

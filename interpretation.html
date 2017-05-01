@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Exploring Stadium Data</title>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="initial-scale=1,width=device-width">
+<link rel="shortcut icon" href="favicon-futbol-o.ico">
+<script src ="https://use.fontawesome.com/e286d068cb.js"></script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link href='//fonts.googleapis.com/css?family=Marvel' rel='stylesheet'>
+<link rel="stylesheet" type="text/css" href="stadiummap.css">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+</style>
+<body class="w3-light-grey">
+
+<!-- Header -->
+<div class="w3-top">
+<div class="w3-bar w3-black">
+  <a href="main.php" class="w3-bar-item w3-button w3-mobile"> <i class="fa fa-hand-o-left" aria-hidden="true"></i>  Back to Map</a>
+  <h1 style="text-align: center; font-family: 'Marvel';">Visualizing Football Stadiums in the U.K</h1>
+</div>
+</div>
+ <hr>
+ <hr>
+ <hr>
+ 
+<!-- w3-content defines a container for fixed size centered content, 
+and is wrapped around the whole page content. -->
+<div class="w3-content" style="max-width:1400px">
+
+ <div class="w3-container">
+<h1>Insights from stadium data</h1>
+</div>
+
+
+<!-- Grid -->
+<div class="w3-row">
+
+<!-- Sections -->
+<div class="w3-col l8 s12">
+  <!-- Section 1 -->
+  <div class="w3-card-4 w3-margin w3-white">
+    <img src="Images/southUK.PNG" alt="Nature" style="width:100%">
+    <div class="w3-container">
+      <h3><b>England and Wales</b></h3>
+      <h5>Spotlight on: <span class="w3-opacity">Clustering</span></h5>
+    </div>
+
+    <div class="w3-container">
+      <p> Using Leaflet's <a href="http://leafletjs.com/reference.html#circle">Circle</a> and <a href="http://leafletjs.com/reference.html#polygon">Polygon</a> features, we can put a focus on the distribution of stadiums in just England and Wales. As one would probably expect, we can see the clustering around the <a href= "https://en.wikipedia.org/wiki/List_of_Primary_Urban_Areas_in_England_by_population"> most populated metropolitan areas</a> of London, Manchester and Sheffield (red circles). We can also see a 'coastal belt' of stadiums on the southern coast (blue triangle) - signalling the <a href= "https://www.skyscanner.net/news/16-uk-cities-to-visit-in-2016">entertainment value</a> afforded to coastal cities and towns like Brighton and Bournemouth - enhancing the brand value of football clubs that are based there.</p><br>
+      </div>
+  </div>
+  <hr>
+  
+  
+  
+  <!-- Section 2 -->
+  <div class="w3-card-4 w3-margin w3-white">
+  <img src="Images/northernlights.PNG" alt="Scotland" style="width:100%">
+  <br>
+    <div class="w3-container">
+      <h3><b>Scotland and the 'Northern Lights'</b></h3>
+      <h5>Spotlight on: <span class="w3-opacity">Night Lights</span></h5>
+    </div>
+
+    <div class="w3-container">
+      <p>Here we see focus on Scotland and the norther side of the U.K with a background of 'Earth at Night' imagery from <a href="https://www.nasa.gov/mission_pages/NPP/news/earth-at-night.html">NASA</a>. This juxtaposition confirms our hypothesis from above - of stadiums clustering around brightly lit urban areas. What is intriguing about this visualization is that upon checking the individual stadium capacities of the 'outlier' stadiums on the fringes nearer to the coasts, the stadium capacities (which are in the 1000 - 7000 range) can be said to be a proxy for the <a href= "https://www.nrscotland.gov.uk/statistics-and-data/statistics/stats-at-a-glance/council-area-profiles">overall population</a> of the regions they are in. </p><br>
+      </div>
+  </div>
+  <hr>
+  
+  
+
+  <!-- Section 3-->
+  <div class="w3-card-4 w3-margin w3-white">
+  <img src="Images/capacitycollage.PNG" alt="Norway" style="width:100%">
+  <br>
+    <div class="w3-container">
+      <h3><b>Capacity Comparison</b></h3>
+      <h5>Spotlight on: <span class="w3-opacity">Seating Capacity</span></h5>
+    </div>
+
+    <div class="w3-container">
+      <p>Looking at the above comparison of the lowest capacity stadiums (0 - 10,188) and compare it to the largest stadiums (60,073 - 90,000), we see the stark difference in representation by league. At the lower end, the majority of stadiums are occupied by teams classified with an 'Other' league - typically in the <a href="https://en.wikipedia.org/wiki/Scottish_football_league_system">Scottish lower leagues</a> amongst which there is tremendous <a href="http://www.football-data.co.uk/scotlandm.php">churn</a> - explaining their relegation to the smaller, often <a href="http://www.fsif.co.uk/">publicly funded</a> stadiums. At the upper end of the capacity spectrum, the data is more common-sense - with the large national team stadiums of England and Wales - Wembley and Millenium stadium - making up a large part of the consort along with the biggest Premier League and Scottish Premiership stadiums. </p><br>
+      </div>
+  </div>
+  <hr>
+  
+  
+   <!-- Section 4-->
+  <div class="w3-card-4 w3-margin w3-white">
+  <img src="Images/longest_journey.PNG" alt="Longest Journey" style="width:100%">
+  <br>
+    <div class="w3-container">
+      <h3><b>The longest Journey</b></h3>
+      <h5>Spotlight on: <span class="w3-opacity">Distance between stadiums</span></h5>
+    </div>
+
+    <div class="w3-container">
+      <p>After exploring the distances between various stadiums in the respective leagues, I decided to draw a route using Leaflet's <a href="http://leafletjs.com/reference.html#polyline">Polylines</a> functionality of the longest journey that fans and players have to make in the Premier League - <a href = "http://www.telegraph.co.uk/sport/football/competitions/premier-league/11977109/English-footballs-longest-journeys-presents-Bournemouth-against-Newcastle-in-Premier-League-early-kick-off.html">a 359 mile journey</a> between Bournemouth and Newcastle. The visualization shows the cross country trip that essentially covers the breadth of England in one fell swoop. Although the trip only takes about <a href="http://www.prokerala.com/travel/flight-time/from-newcastle/to-bournemouth/"> one and a half hours by flight</a>, one can imagine that for die-hard local fans who can't afford flights, the road trip would have to be a multi-day affair. This visualization also makes us appreciate the relative density of football stadiums in the U.K compared to those in <a href = "http://www.sportmapworld.com/map/baseball/north-america/mlb/">other countries</a> - allowing us to visit and enjoy ourselves in sporting venues all around us.</p><br>
+      </div>
+  </div>
+  
+<!-- End of main content sections -->
+</div>
+
+<!-- Introduction menu -->
+<div class="w3-col l4">
+  <!-- Goal of the Map card -->
+  <div class="w3-card-2 w3-margin w3-margin-top w3-gray">
+  <img src="Images/stadiumhero.jpg" alt="Stadium" style="width:100%">
+    <div class="w3-container w3-white">
+      <h4><b>Goal of this Map</b></h4>
+      <p>The purpose of this map is to give the viewer a high level visualization of football stadiums across the U.K. The aim is to provide a deeper perspective into the breadth of sporting facilities available in the country - allowing the user to filter by team and capacity. </p><br>
+    </div>
+  </div><hr>
+  
+  <!-- Contents -->
+  <div class="w3-card-2 w3-margin">
+    <div class="w3-container w3-padding">
+      <h4 style="color: black">Sections</h4>
+    </div>
+    <ul class="w3-ul w3-hoverable w3-white">
+      <li class="w3-padding-16">
+        <img src="Images/southUK.PNG" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+        <span id="myspan" class="w3-large">England and Wales</span><br>
+        <span>Clustering</span>
+      </li>
+      <li class="w3-padding-16">
+        <img src="Images/northernlights.PNG" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+        <span class="w3-large">Scotland</span><br>
+        <span>Night Lights</span>
+      </li> 
+      <li class="w3-padding-16">
+        <img src="Images/stadium-large.png" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+        <span class="w3-large">Capacity Comparison</span><br>
+        <span>Stadium Capacity</span>
+      </li>   
+      <li class="w3-padding-16 w3-hide-medium w3-hide-small">
+        <img src="Images/longest_journey.PNG" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+        <span class="w3-large">Longest Journey</span><br>
+        <span>Distance</span>
+      </li>  
+    </ul>
+  </div>
+  <hr> 
+  
+<!-- END Introduction Menu -->
+</div>
+
+<!-- END GRID -->
+</div><br>
+
+<!-- END w3-content -->
+</div>
+</body>
+
+</html>
