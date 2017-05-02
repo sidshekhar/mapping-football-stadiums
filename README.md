@@ -20,7 +20,7 @@ The The purpose of this map is to give the viewer a high level visualization of 
 
 <img src="Images/southUK.PNG" alt="photo of clustering markers">
 <em>Interesting patterns can be observed in the clustering of stadiums near major metropolitan areas in England</em>
-<br>
+<hr>
 
 <img src="Images/northernlights.PNG" alt="photo of earth at night">
 <em>The juxtaposition of <a href="https://www.nasa.gov/topics/earth/earthday/gall_earth_night.html">NASA's</a> 'Earth at Night' view below the markers shows the clustering patterns and their correlation to stadium capacity even more clearly. </em>
