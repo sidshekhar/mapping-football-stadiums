@@ -175,7 +175,7 @@ input:checked + .slider:before {
     z-index: 10000;
     /* Sit on top */
 
-    padding-top: 400px;
+    padding-top: 200px;
     /* Location of the box */
 
     left: 0;
@@ -211,29 +211,6 @@ input:checked + .slider:before {
     animation-duration: 0.4s;
 }
 
-/* Add Animation to modal */
-@-webkit-keyframes animatetop {
-    from {
-        top: -300px;
-        opacity: 0;
-    }
-    to {
-        top: 0;
-        opacity: 1;
-    }
-}
-
-@keyframes animatetop {
-    from {
-        top: -300px;
-        opacity: 0;
-    }
-    to {
-        top: 0;
-        opacity: 1;
-    }
-}
-
 /* The Close Button of the modal*/
 .close {
     color: white;
@@ -259,7 +236,7 @@ input:checked + .slider:before {
     padding: 2px 16px;
     margin-left: 16px;
     margin-bottom: 16px;
-    matgin-right: 16px;
+    margin-right: 16px;
 }
 
 .modal-footer {
