@@ -10,10 +10,10 @@
 	<script src ="https://use.fontawesome.com/e286d068cb.js"></script>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" type="text/css" href="stadiummap.css">
-    <link href='//fonts.googleapis.com/css?family=Marvel' rel='stylesheet'>
-    <link href='//fonts.googleapis.com/css?family=PT%20Sans%20Narrow' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Marvel' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=PT%20Sans%20Narrow' rel='stylesheet'>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 	<link rel="stylesheet" href="https://unpkg.com/leaflet-easybutton@2.0.0/src/easy-button.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.5.0/introjs.min.css" />
 </head>
@@ -96,10 +96,11 @@
     <div class="filter w3-card" data-step="2" data-intro='Search for stadiums by team. Type anything, including just a single letter or partial terms like "city" for example to get any and all stadiums that host teams with names containing your search query.'>
 
         <h2>Search By Team</h2>
+        <form id="searchform">
         <label for="searchterm">
             <input id="searchterm" type="search" name=teamsearch placeholder="Ex: Arsenal" autocomplete="on" class="search">
         </label>
-        <input type="submit" value='Search' class="btn-class">
+        <button type="submit" class="btn-class">Search</buttton>
         </form>
     </div>
 
@@ -107,9 +108,10 @@
 	<!--Slider to filter stadiums by capacity. Form request is POST so user cannot inject or mess with SQL through the URL.-->
     <div class="filter w3-card" data-step="3" data-intro="Drag each end of the slider and click 'Filter' to granularly filter by stadium capacity.">
         <h2>Filter by Stadium Capacity</h2>
+        <form>
 		<!--Hidden input fields to set the lower and upper ranges of the slider to send to the database.-->
-		<input type="hidden" name="lowerbounds" id="lowerbounds" value="<?php echo $_POST['lowerbounds']; ?>"/>
-		<input type="hidden" name="upperbounds" id="upperbounds" value="<?php echo $_POST['upperbounds']; ?>"/>
+		<input type="hidden" name="lowerbounds" id="lowerbounds" value="0"/>
+		<input type="hidden" name="upperbounds" id="upperbounds" value="90000"/>
 	<p>
 	  <label for="amount">Capacity Range:</label>
 	  <input type="text" id="amount" readonly >
@@ -135,9 +137,10 @@
         <br>
         <br>
         <!-- Rounded switch, with the toggle kept checked if submitted-->
+        <form>
 		<div class="w3-container w3-cell">
         <label class="switch" data-step="5" data-intro="Simple toggle for those who want to quickly see the stadiums that house England's top flight - The Premier League." data-position="right">
-            <input type="checkbox" name=premierleague value="Yes" <?php if(isset($_POST[ 'premierleague'])) echo "checked='checked'"; ?> >
+            <input type="checkbox" name=premierleague value="Yes">
             <span class="slider round"></span>
         </label>
 		</div>
@@ -150,10 +153,10 @@
 	
 
         <!--This is a similar toggle switch to show only national teams. -->
-
+        <form>
 		<div class="w3-container w3-cell">
         <label class="switch" data-step="6" data-intro="Yet another toggle you can switch on if you only want to see stadiums that host national teams." data-position="right">
-            <input type="checkbox" name=nationalteams value="Yes" <?php if(isset($_POST[ 'nationalteams'])) echo "checked='checked'"; ?> >
+            <input type="checkbox" name=nationalteams value="Yes" >
             <span class="slider round"></span>
         </label>
 		</div>
@@ -171,6 +174,7 @@
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 	<script src="https://unpkg.com/leaflet-easybutton@2.0.0/src/easy-button.js"></script>
+    <script src="./stadiumdata.js"></script>
     <script src="./maplogic.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
 
