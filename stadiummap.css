@@ -34,6 +34,7 @@ h4 {
 }
 
 /* Leaflet map styling */
+
 #mapid {
     height: 115%;
     width: 65%;
@@ -41,6 +42,26 @@ h4 {
     /*margin-right: 10px;*/
     margin-left: 10px;
     border: thin solid black;
+}
+
+@media only screen and (max-width: 636px) {
+    /* For mobile phones: */
+    #mapid {
+        width: 97%;
+        height: 60%;
+    }
+}
+
+@media screen and (min-width: 48em) {
+    #mapid {
+        height: 152%;
+    }
+}
+
+@media screen and (min-width: 100em) {
+    #mapid {
+        height: 114%;
+    }
 }
 
 /* Team Search styling */
