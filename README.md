@@ -1,6 +1,8 @@
 # mapping-football-stadiums
-> An interactive map that displays football stadiums in the U.K and allows filtering and searching on select criteria. The map was built using Leaflet.js and stores data about the stadiums in a database.  
+> An interactive map that displays football stadiums in the U.K and allows filtering and searching on select criteria. The map was built using Leaflet.js and stores data about the stadiums in a database. View it here: https://www.sidshekhar.com/mapping-football-stadiums/
 <br>
+
+
 
 <img src="Images/screenshot5.PNG" alt="site screenshot">
 <em>Map View showing stadium detail and filters on the right</em>
